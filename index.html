@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#4F46E5">
+    <title>江柯蓉 · 个人简历</title>
+    <style>
+        :root {
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+            --accent-primary: #4F46E5;
+            --accent-secondary: #06B6D4;
+            --accent-gradient: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%);
+            --accent-gradient-soft: linear-gradient(135deg, rgba(79, 70, 229, 0.08) 0%, rgba(6, 182, 212, 0.08) 100%);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.07), 0 2px 6px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 16px 50px rgba(79, 70, 229, 0.16), 0 6px 18px rgba(6, 182, 212, 0.1);
+            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 320ms cubic-bezier(0.4, 0, 0.2, 1);
+            --nav-height: 64px;
+            --scroll-margin: 80px;
+            --bg-primary: #F8FAFC;
+            --bg-secondary: #FFFFFF;
+            --bg-card: #FFFFFF;
+            --bg-card-hover: #FAFBFF;
+            --bg-elevated: #FFFFFF;
+            --bg-subtle: #F1F5F9;
+            --text-primary: #0F172A;
+            --text-secondary: #334155;
+            --text-muted: #64748B;
+            --text-inverse: #FFFFFF;
+            --border-color: #E2E8F0;
+            --border-light: #F1F5F9;
+            --code-bg: #F1F5F9;
+            --badge-bg: #EEF2FF;
+            --badge-text: #4F46E5;
+            --timeline-line: #CBD5E1;
+            --overlay-bg: rgba(15, 23, 42, 0.5);
+            --veil-color: rgba(240, 251, 236, 0.58);
+            --grain-light: #e8eec4;
+            --grain-mid: #bdcb8c;
+            --grain-dark: #7e9444;
+            --grain-glow: rgba(200, 224, 150, 0.28);
+            --blade-tip: #88b650;
+            --blade-mid: #4f7d27;
+            --blade-base: #2b4a12;
+            --ui-scale: 1;
+            --app-height: 100vh;
+            --base-font: 16px;
+        }
+        [data-theme="dark"] {
+            --bg-primary: #0B1121;
+            --bg-secondary: #0F172A;
+            --bg-card: #111C33;
+            --bg-card-hover: #152038;
+            --bg-elevated: #1A2744;
+            --bg-subtle: #1E293B;
+            --text-primary: #F1F5F9;
+            --text-secondary: #CBD5E1;
+            --text-muted: #94A3B8;
+            --text-inverse: #0F172A;
+            --border-color: #1E293B;
+            --border-light: #1A2744;
+            --code-bg: #1E293B;
+            --badge-bg: #1E293B;
+            --badge-text: #818CF8;
+            --timeline-line: #334155;
+            --overlay-bg: rgba(0, 0, 0, 0.7);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.4);
+            --shadow-hover: 0 16px 50px rgba(79, 70, 229, 0.3), 0 6px 18px rgba(6, 182, 212, 0.2);
+            --veil-color: rgba(6, 15, 9, 0.68);
+            --grain-light: #d2e0a0;
+            --grain-mid: #96ae5e;
+            --grain-dark: #56692e;
+            --grain-glow: rgba(170, 210, 120, 0.3);
+            --blade-tip: #5f8e37;
+            --blade-mid: #34581c;
+            --blade-base: #16290c;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--scroll-margin);
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            font-size: var(--base-font, 16px);
+        }
+        body {
+            font-family: var(--font-sans);
+            font-size: 0.94rem;
+            line-height: 1.65;
+            color: var(--text-primary);
+            background-color: #dcecd0;
+            transition: color var(--transition-base), background-color var(--transition-base);
+            min-height: var(--app-height, 100vh);
+            overflow-x: hidden;
+        }
+        [data-theme="dark"] body { background-color: #0a1509; }
+
+        .bg-grass {
+            position: fixed; inset: 0; z-index: 0; pointer-events: none;
+            background:
+                repeating-linear-gradient(88deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 9px),
+                repeating-linear-gradient(93deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 1px, transparent 1px, transparent 13px),
+                repeating-linear-gradient(84deg, rgba(255,255,255,0.032) 0px, rgba(255,255,255,0.032) 1px, transparent 1px, transparent 7px),
+                repeating-linear-gradient(96deg, rgba(0,0,0,0.032) 0px, rgba(0,0,0,0.032) 1px, transparent 1px, transparent 17px),
+                radial-gradient(ellipse 85% 55% at 18% 0%, rgba(222,255,195,0.45), transparent 62%),
+                radial-gradient(ellipse 70% 48% at 88% 100%, rgba(8,38,4,0.42), transparent 65%),
+                radial-gradient(ellipse 60% 42% at 62% 46%, rgba(255,255,255,0.07), transparent 70%),
+                linear-gradient(180deg, #cfe8b2 0%, #b4d894 12%, #94c170 28%, #72a74d 48%, #578b33 68%, #437024 86%, #33591a 100%);
+        }
+        [data-theme="dark"] .bg-grass {
+            background:
+                repeating-linear-gradient(88deg, rgba(255,255,255,0.028) 0px, rgba(255,255,255,0.028) 1px, transparent 1px, transparent 9px),
+                repeating-linear-gradient(93deg, rgba(0,0,0,0.07) 0px, rgba(0,0,0,0.07) 1px, transparent 1px, transparent 13px),
+                radial-gradient(ellipse 80% 50% at 22% 0%, rgba(120,190,105,0.16), transparent 62%),
+                radial-gradient(ellipse 70% 48% at 88% 100%, rgba(0,0,0,0.55), transparent 65%),
+                linear-gradient(180deg, #1b3120 0%, #152818 20%, #101f14 42%, #0b180e 66%, #071009 86%, #040a05 100%);
+        }
+        .bg-veil {
+            position: fixed; inset: 0; z-index: 1; pointer-events: none;
+            background: var(--veil-color);
+            transition: background var(--transition-base);
+        }
+        .meadow-layer {
+            position: fixed; inset: 0; z-index: 2; pointer-events: none; overflow: hidden;
+        }
+        .foxtail {
+            position: absolute; bottom: 0;
+            height: calc(var(--stalk-h, 100px) + var(--grain-h, 36px));
+            width: var(--grain-w, 10px);
+            transform-origin: 50% 100%;
+            animation: foxtailSway var(--sway-dur, 3.2s) ease-in-out infinite alternate;
+            animation-delay: var(--sway-delay, 0s);
+            will-change: transform;
+        }
+        @keyframes foxtailSway {
+            0% { transform: rotate(calc(var(--sway-base,0deg) - var(--sway-amp,3)*1deg)) skewX(calc(var(--sway-amp,3)*-0.12deg)); }
+            100% { transform: rotate(calc(var(--sway-base,0deg) + var(--sway-amp,3)*1deg)) skewX(calc(var(--sway-amp,3)*0.12deg)); }
+        }
+        .foxtail .stalk {
+            position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+            width: 2px; height: var(--stalk-h, 100px); border-radius: 2px 2px 0 0;
+            background: linear-gradient(180deg, var(--grain-mid) 0%, var(--blade-tip) 22%, var(--blade-mid) 62%, var(--blade-base) 100%);
+        }
+        .foxtail .grain {
+            position: absolute; left: 50%; bottom: var(--stalk-h, 100px); transform: translateX(-50%);
+            width: var(--grain-w, 10px); height: var(--grain-h, 36px);
+            border-radius: 50% 50% 40% 40% / 56% 56% 44% 44%;
+            background:
+                repeating-linear-gradient(90deg, var(--grain-light) 0px, var(--grain-light) 1px, transparent 1px, transparent 3px),
+                repeating-linear-gradient(0deg, rgba(255,255,255,0.14) 0px, rgba(255,255,255,0.14) 1px, transparent 1px, transparent 4px),
+                linear-gradient(180deg, var(--grain-light) 0%, var(--grain-mid) 42%, var(--grain-dark) 100%);
+            box-shadow: inset 0 0 5px rgba(255,255,255,0.28), 0 0 8px var(--grain-glow);
+        }
+        .foxtail .grain::before {
+            content: ""; position: absolute; inset: -1px -2px 1px -2px; border-radius: inherit;
+            background: repeating-linear-gradient(90deg, rgba(255,255,255,0.2) 0px, rgba(255,255,255,0.2) 0.6px, transparent 0.6px, transparent 2.4px);
+            filter: blur(0.5px); pointer-events: none;
+        }
+        .blade {
+            position: absolute; bottom: 0;
+            width: var(--bw, 4px); height: var(--bh, 60px);
+            border-radius: 62% 62% 0 0 / 46% 46% 0 0;
+            background: linear-gradient(180deg, var(--blade-tip) 0%, var(--blade-mid) 55%, var(--blade-base) 100%);
+            transform-origin: 50% 100%;
+            animation: bladeSway var(--bdur, 3s) ease-in-out infinite alternate;
+            animation-delay: var(--bdelay, 0s);
+            will-change: transform;
+        }
+        @keyframes bladeSway {
+            0% { transform: rotate(calc(var(--bbase,0deg) - var(--bamp,5)*1deg)); }
+            100% { transform: rotate(calc(var(--bbase,0deg) + var(--bamp,5)*1deg)); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .foxtail, .blade { animation: none !important; }
+        }
+
+        /* ── Navbar ── */
+        .navbar {
+            position: fixed; top: 0; left: 0; right: 0;
+            height: var(--nav-height); z-index: 1000;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 24px;
+            background: color-mix(in srgb, var(--bg-secondary) 82%, transparent);
+            backdrop-filter: blur(18px) saturate(1.4);
+            -webkit-backdrop-filter: blur(18px) saturate(1.4);
+            border-bottom: 1px solid var(--border-light);
+            transition: background var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+        }
+        .navbar.scrolled { box-shadow: var(--shadow-md); border-bottom-color: var(--border-color); }
+        .navbar-brand {
+            display: flex; align-items: center; gap: 10px;
+            font-weight: 700; font-size: 1.1rem; letter-spacing: -0.01em;
+            color: var(--text-primary); text-decoration: none; white-space: nowrap;
+        }
+        .navbar-brand .brand-dot {
+            width: 10px; height: 10px; border-radius: 50%;
+            background: var(--accent-gradient); flex-shrink: 0;
+        }
+        .navbar-links {
+            display: flex; align-items: center; gap: 4px;
+            list-style: none; flex-wrap: nowrap;
+        }
+        .navbar-links a {
+            display: inline-block; padding: 8px 14px;
+            font-size: 0.86rem; font-weight: 500;
+            color: var(--text-secondary); text-decoration: none;
+            border-radius: var(--radius-sm);
+            transition: color var(--transition-fast), background var(--transition-fast);
+            white-space: nowrap; letter-spacing: 0.01em;
+        }
+        .navbar-links a:hover, .navbar-links a:focus-visible {
+            color: var(--accent-primary); background: var(--badge-bg); outline: none;
+        }
+        .navbar-actions { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+        .icon-btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 38px; height: 38px; border-radius: 50%;
+            border: 1px solid var(--border-color);
+            background: var(--bg-secondary); color: var(--text-secondary);
+            cursor: pointer; transition: all var(--transition-fast);
+            flex-shrink: 0; position: relative;
+        }
+        .icon-btn:hover {
+            border-color: var(--accent-primary); color: var(--accent-primary);
+            box-shadow: var(--shadow-sm); transform: translateY(-1px);
+        }
+        .icon-btn:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 2px; }
+        .icon-btn svg {
+            width: 18px; height: 18px; fill: none; stroke: currentColor;
+            stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+        }
+        .icon-btn.print-btn svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
+        .icon-btn.music-btn.active {
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+            background: var(--badge-bg);
+        }
+        .icon-btn.music-btn.active::before {
+            content: ""; position: absolute; inset: -4px; border-radius: 50%;
+            border: 2px solid var(--accent-primary); opacity: 0.55;
+            animation: musicPulse 2s ease-out infinite; pointer-events: none;
+        }
+        @keyframes musicPulse {
+            0% { transform: scale(0.85); opacity: 0.55; }
+            70% { transform: scale(1.22); opacity: 0; }
+            100% { transform: scale(1.22); opacity: 0; }
+        }
+        .icon-btn.music-btn.music-hint {
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+            background: var(--badge-bg);
+            animation: musicHint 1.4s ease-in-out infinite;
+        }
+        @keyframes musicHint {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(79,70,229,0.55); }
+            50% { box-shadow: 0 0 0 9px rgba(79,70,229,0); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .icon-btn.music-btn.active::before,
+            .icon-btn.music-btn.music-hint { animation: none; }
+        }
+        .hamburger { display: none; }
+
+        /* ── Hero ── */
+        .hero {
+            position: relative; z-index: 10;
+            min-height: 100vh; min-height: var(--app-height, 100vh);
+            display: flex; align-items: center; justify-content: center;
+            padding: calc(var(--nav-height) + 40px) 24px 60px;
+            overflow: hidden; background: transparent;
+        }
+        .hero-content {
+            position: relative; z-index: 2;
+            max-width: 1000px; display: flex; align-items: center;
+            gap: 48px; text-align: left;
+            animation: fadeInUp 0.7s ease-out both;
+            background: color-mix(in srgb, var(--bg-card) 78%, transparent);
+            backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+            border: 1px solid color-mix(in srgb, var(--border-color) 70%, transparent);
+            border-radius: var(--radius-xl);
+            padding: 40px 44px; box-shadow: var(--shadow-lg);
+        }
+        .hero-left { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; }
+        .hero-avatar {
+            width: 160px; height: 160px; border-radius: 50%;
+            background: var(--accent-gradient);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 3rem; font-weight: 700; color: #fff; letter-spacing: -0.02em;
+            box-shadow: 0 8px 30px rgba(79,70,229,0.3), 0 0 0 6px rgba(255,255,255,0.2);
+            user-select: none; overflow: hidden; position: relative;
+        }
+        .hero-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
+        .hero-avatar .avatar-fallback {
+            position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+            font-size: 3rem; font-weight: 700; color: #fff;
+            background: var(--accent-gradient); border-radius: 50%; z-index: 1;
+        }
+        .hero-avatar img.hidden { display: none; }
+        .hero-right { flex: 1; min-width: 0; }
+        .hero-name {
+            font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
+            letter-spacing: -0.02em; line-height: 1.2;
+            color: var(--text-primary); margin-bottom: 4px;
+        }
+        .hero-title {
+            font-size: 1.1rem; font-weight: 500; color: var(--text-secondary);
+            margin-bottom: 12px; letter-spacing: 0.02em;
+        }
+        .hero-tagline {
+            font-size: 0.95rem; color: var(--text-muted);
+            max-width: 560px; margin-bottom: 20px; line-height: 1.7;
+        }
+        .hero-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+        .badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 7px 16px; font-size: 0.82rem; font-weight: 500;
+            border-radius: 999px; background: var(--badge-bg); color: var(--badge-text);
+            border: 1px solid color-mix(in srgb, var(--badge-text) 18%, transparent);
+            transition: all var(--transition-fast); letter-spacing: 0.01em;
+        }
+        .badge:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 12px 24px; font-size: 0.9rem; font-weight: 600;
+            border-radius: 999px; border: none; cursor: pointer;
+            text-decoration: none; transition: all var(--transition-base);
+            letter-spacing: 0.01em; font-family: var(--font-sans); user-select: none;
+        }
+        .btn-primary {
+            background: var(--accent-gradient); color: #fff;
+            box-shadow: 0 4px 14px rgba(79,70,229,0.3);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(79,70,229,0.4); }
+        .btn-outline {
+            background: var(--bg-secondary); color: var(--text-secondary);
+            border: 1.5px solid var(--border-color);
+        }
+        .btn-outline:hover {
+            border-color: var(--accent-primary); color: var(--accent-primary);
+            transform: translateY(-2px); box-shadow: var(--shadow-sm);
+        }
+        .btn:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 2px; }
+        .btn svg {
+            width: 16px; height: 16px; fill: none; stroke: currentColor;
+            stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+        }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .section {
+            position: relative; z-index: 10;
+            padding: 56px 24px; max-width: 1120px; margin: 0 auto;
+            animation: fadeIn 0.5s ease-out both;
+        }
+        .section-header { text-align: center; margin-bottom: 40px; }
+        .section-header h2 {
+            font-size: 1.9rem; font-weight: 700; letter-spacing: -0.01em;
+            color: var(--text-primary); margin-bottom: 8px;
+            text-shadow: 0 1px 14px color-mix(in srgb, var(--bg-primary) 80%, transparent);
+        }
+        .section-header p { font-size: 0.92rem; color: var(--text-secondary); }
+        .section-divider {
+            width: 48px; height: 3px; background: var(--accent-gradient);
+            border-radius: 3px; margin: 12px auto 0;
+        }
+
+        .highlights-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;
+        }
+        .highlight-card {
+            background: var(--bg-card); border: 1px solid var(--border-light);
+            border-radius: var(--radius-md); padding: 22px 20px; text-align: center;
+            transition: all var(--transition-base); cursor: default;
+            position: relative; overflow: hidden; box-shadow: var(--shadow-sm);
+        }
+        .highlight-card::after {
+            content: ""; position: absolute; inset: 0;
+            background: var(--accent-gradient-soft); opacity: 0;
+            transition: opacity var(--transition-base); pointer-events: none; border-radius: inherit;
+        }
+        .highlight-card:hover {
+            transform: translateY(-4px); box-shadow: var(--shadow-md);
+            border-color: color-mix(in srgb, var(--accent-primary) 25%, var(--border-color));
+        }
+        .highlight-card:hover::after { opacity: 1; }
+        .highlight-number {
+            font-size: 2rem; font-weight: 800; letter-spacing: -0.02em;
+            background: var(--accent-gradient); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+            margin-bottom: 4px; position: relative; z-index: 1;
+        }
+        .highlight-label {
+            font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;
+            position: relative; z-index: 1;
+        }
+
+        .tabs-container {
+            background: var(--bg-card); border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light); overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: background var(--transition-base), border-color var(--transition-base);
+        }
+        .tabs-list {
+            display: flex; gap: 4px; padding: 10px 14px 6px;
+            border-bottom: 1px solid var(--border-light);
+            overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+        }
+        .tabs-list::-webkit-scrollbar { display: none; }
+        .tab-btn {
+            padding: 10px 20px; font-size: 0.88rem; font-weight: 600;
+            font-family: var(--font-sans); border: none; background: transparent;
+            color: var(--text-muted); cursor: pointer;
+            border-radius: var(--radius-sm); transition: all var(--transition-fast);
+            white-space: nowrap; letter-spacing: 0.01em; position: relative;
+        }
+        .tab-btn:hover { color: var(--text-primary); background: var(--bg-subtle); }
+        .tab-btn[aria-selected="true"] { color: var(--accent-primary); background: var(--badge-bg); }
+        .tab-btn[aria-selected="true"]::after {
+            content: ""; position: absolute; bottom: -7px; left: 20%; right: 20%;
+            height: 2.5px; background: var(--accent-gradient); border-radius: 2px;
+        }
+        .tab-btn:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: -2px; }
+        .tab-panel { padding: 24px 20px; animation: fadeIn 0.3s ease-out; }
+        .tab-panel[hidden] { display: none; }
+
+        .exp-item { padding: 16px 0; border-bottom: 1px solid var(--border-light); }
+        .exp-item:last-child { border-bottom: none; }
+        .exp-header {
+            display: flex; flex-wrap: wrap; align-items: baseline;
+            gap: 8px 16px; margin-bottom: 6px;
+        }
+        .exp-title { font-size: 1.05rem; font-weight: 700; color: var(--text-primary); letter-spacing: -0.01em; }
+        .exp-org { font-size: 0.88rem; font-weight: 600; color: var(--accent-primary); }
+        .exp-date { font-size: 0.8rem; color: var(--text-muted); font-weight: 400; margin-left: auto; white-space: nowrap; }
+        .exp-desc { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; }
+        .exp-desc ul { list-style: none; padding-left: 0; margin-top: 6px; }
+        .exp-desc ul li { position: relative; padding-left: 18px; margin-bottom: 5px; }
+        .exp-desc ul li::before {
+            content: "▸"; position: absolute; left: 0;
+            color: var(--accent-primary); font-weight: 700; font-size: 0.8rem;
+        }
+        .projects-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
+        }
+        .project-card {
+            background: var(--bg-card); border: 1px solid var(--border-light);
+            border-radius: var(--radius-md); padding: 26px 22px;
+            transition: all var(--transition-base); cursor: default;
+            display: flex; flex-direction: column; gap: 10px;
+            position: relative; overflow: hidden;
+        }
+        .project-card::before {
+            content: ""; position: absolute; top: 0; left: 0; right: 0;
+            height: 3px; background: var(--accent-gradient); opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+        .project-card:hover {
+            transform: translateY(-5px); box-shadow: var(--shadow-hover);
+            border-color: color-mix(in srgb, var(--accent-primary) 20%, var(--border-color));
+            background: var(--bg-card-hover);
+        }
+        .project-card:hover::before { opacity: 1; }
+        .project-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); letter-spacing: -0.01em; }
+        .project-meta {
+            display: flex; flex-wrap: wrap; gap: 6px 12px;
+            font-size: 0.78rem; color: var(--text-muted); font-weight: 500;
+        }
+        .project-meta span { display: inline-flex; align-items: center; gap: 4px; }
+        .project-meta .meta-tag {
+            padding: 3px 10px; border-radius: 999px;
+            background: var(--bg-subtle); color: var(--text-secondary); font-size: 0.75rem;
+        }
+        .project-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; }
+        .project-card ul { list-style: none; padding-left: 0; margin-top: 4px; }
+        .project-card ul li {
+            position: relative; padding-left: 18px; margin-bottom: 5px;
+            font-size: 0.85rem; color: var(--text-secondary);
+        }
+        .project-card ul li::before {
+            content: "→"; position: absolute; left: 0;
+            color: var(--accent-primary); font-weight: 600; font-size: 0.75rem;
+        }
+        .project-screenshots {
+            margin-top: 10px; display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;
+        }
+        .screenshot-wrapper { display: flex; flex-direction: column; gap: 4px; }
+        .project-screenshots img {
+            width: 100%; height: auto; border-radius: var(--radius-sm);
+            border: 1px solid var(--border-light);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+            cursor: pointer; display: block;
+        }
+        .project-screenshots img:hover { transform: scale(1.03); box-shadow: var(--shadow-sm); }
+        .project-screenshots .screenshot-caption {
+            font-size: 0.72rem; color: var(--text-muted); text-align: center;
+        }
+
+        .skills-container {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px;
+        }
+        .skill-group {
+            background: var(--bg-card); border: 1px solid var(--border-light);
+            border-radius: var(--radius-md); padding: 22px 18px;
+            transition: all var(--transition-base); box-shadow: var(--shadow-sm);
+        }
+        .skill-group:hover {
+            box-shadow: var(--shadow-md);
+            border-color: color-mix(in srgb, var(--accent-primary) 15%, var(--border-color));
+        }
+        .skill-group h4 {
+            font-size: 0.92rem; font-weight: 700; color: var(--text-primary);
+            margin-bottom: 12px; display: flex; align-items: center;
+            gap: 8px; letter-spacing: 0.01em;
+        }
+        .skill-group h4 .skill-icon {
+            width: 24px; height: 24px; border-radius: 6px;
+            background: var(--accent-gradient-soft);
+            display: inline-flex; align-items: center; justify-content: center;
+            font-size: 0.75rem; flex-shrink: 0;
+        }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .skill-tag {
+            padding: 6px 14px; font-size: 0.78rem; font-weight: 500;
+            border-radius: 999px; background: var(--bg-subtle); color: var(--text-secondary);
+            border: 1px solid var(--border-light); transition: all var(--transition-fast);
+        }
+        .skill-tag:hover {
+            border-color: var(--accent-primary); color: var(--accent-primary);
+            transform: translateY(-1px);
+        }
+        .skill-level { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+        .skill-level-bar {
+            flex: 1; height: 6px; border-radius: 3px;
+            background: var(--bg-subtle); overflow: hidden;
+        }
+        .skill-level-fill {
+            height: 100%; border-radius: 3px;
+            background: var(--accent-gradient); transition: width 0.6s ease-out;
+        }
+        .skill-level-label {
+            font-size: 0.75rem; color: var(--text-muted);
+            white-space: nowrap; min-width: 42px; text-align: right;
+        }
+
+        .edu-timeline { position: relative; padding-left: 28px; }
+        .edu-timeline::before {
+            content: ""; position: absolute; left: 8px; top: 6px; bottom: 6px;
+            width: 2px; background: var(--timeline-line); border-radius: 1px;
+        }
+        .edu-item {
+            position: relative; padding: 16px 20px;
+            background: var(--bg-card); border: 1px solid var(--border-light);
+            border-radius: var(--radius-md); margin-bottom: 14px;
+            transition: all var(--transition-base); box-shadow: var(--shadow-sm);
+        }
+        .edu-item:hover {
+            box-shadow: var(--shadow-md);
+            border-color: color-mix(in srgb, var(--accent-primary) 15%, var(--border-color));
+        }
+        .edu-item::before {
+            content: ""; position: absolute; left: -24px; top: 24px;
+            width: 12px; height: 12px; border-radius: 50%;
+            background: var(--accent-gradient);
+            border: 3px solid var(--bg-primary);
+            box-shadow: 0 0 0 2px var(--accent-primary);
+        }
+        .edu-item h4 { font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+        .edu-item .edu-sub { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
+        .edu-item .edu-courses { font-size: 0.82rem; color: var(--text-secondary); margin-top: 8px; }
+
+        /* ── Certificates with images ── */
+        .certs-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px; margin-top: 16px;
+        }
+        .cert-card {
+            padding: 16px 18px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: all var(--transition-base);
+            box-shadow: var(--shadow-sm);
+        }
+        .cert-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: color-mix(in srgb, var(--accent-primary) 15%, var(--border-color));
+        }
+        .cert-card .cert-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .cert-card .cert-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: var(--accent-gradient-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1rem;
+        }
+        .cert-card .cert-text {
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        .cert-card .cert-image-wrap {
+            width: 100%;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            background: var(--bg-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100px;
+        }
+        .cert-card .cert-image-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+            transition: transform var(--transition-fast);
+        }
+        .cert-card .cert-image-wrap img:hover {
+            transform: scale(1.02);
+        }
+
+        /* ── Footer ── */
+        .footer {
+            position: relative; z-index: 10;
+            padding: 32px 24px 24px; text-align: center;
+            border-top: 1px solid var(--border-light);
+            background: color-mix(in srgb, var(--bg-secondary) 88%, transparent);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            transition: background var(--transition-base), border-color var(--transition-base);
+        }
+        .footer p { font-size: 0.8rem; color: var(--text-muted); }
+        .footer .footer-links {
+            display: flex; gap: 16px; justify-content: center;
+            margin-top: 8px; flex-wrap: wrap;
+        }
+        .footer .footer-links a {
+            font-size: 0.8rem; color: var(--text-muted);
+            text-decoration: none; transition: color var(--transition-fast);
+        }
+        .footer .footer-links a:hover { color: var(--accent-primary); }
+
+        .back-to-top {
+            position: fixed; bottom: 24px; right: 24px;
+            width: 44px; height: 44px; border-radius: 50%;
+            background: var(--accent-gradient); color: #fff; border: none;
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 16px rgba(79,70,229,0.35);
+            opacity: 0; visibility: hidden; transform: translateY(12px);
+            transition: all var(--transition-base); z-index: 900;
+            font-family: var(--font-sans);
+        }
+        .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+        .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(79,70,229,0.45); }
+        .back-to-top:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 2px; }
+        .back-to-top svg {
+            width: 20px; height: 20px; fill: none;
+            stroke: #fff; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round;
+        }
+
+        .toast {
+            position: fixed; bottom: 80px; left: 50%;
+            transform: translateX(-50%) translateY(12px);
+            background: var(--text-primary); color: var(--text-inverse);
+            padding: 10px 20px; border-radius: 999px;
+            font-size: 0.82rem; font-weight: 500;
+            opacity: 0; visibility: hidden;
+            transition: all var(--transition-base);
+            z-index: 1100; white-space: nowrap;
+            box-shadow: var(--shadow-lg); font-family: var(--font-sans);
+        }
+        .toast.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+        [data-device="mobile"] .hero {
+            padding: calc(var(--nav-height) + 20px * var(--ui-scale)) 14px calc(36px * var(--ui-scale));
+        }
+        [data-device="mobile"][data-orientation="landscape"] .hero {
+            min-height: auto;
+            padding-top: calc(var(--nav-height) + 12px);
+            padding-bottom: 24px;
+        }
+        [data-device="mobile"][data-orientation="landscape"] .hero-avatar {
+            width: 88px; height: 88px; font-size: 2rem;
+        }
+        [data-device="mobile"][data-orientation="landscape"] .hero-content {
+            flex-direction: row; text-align: left; gap: 20px; padding: 20px 24px;
+        }
+        [data-device="tablet"] .hero-content {
+            padding: calc(36px * var(--ui-scale)) calc(40px * var(--ui-scale));
+        }
+        [data-device="desktop"] .section {
+            padding: calc(56px * var(--ui-scale)) calc(24px * var(--ui-scale));
+        }
+        [data-touch="true"] .icon-btn { width: 42px; height: 42px; }
+        [data-touch="true"] .btn { padding: 13px 26px; }
+
+        @media (max-width: 900px) {
+            .navbar-links { gap: 0; }
+            .navbar-links a { padding: 8px 8px; font-size: 0.78rem; }
+        }
+        @media (max-width: 768px) {
+            .navbar { padding: 0 16px; }
+            .navbar-links {
+                display: none; position: absolute;
+                top: var(--nav-height); left: 0; right: 0;
+                background: var(--bg-secondary);
+                border-bottom: 1px solid var(--border-color);
+                padding: 12px 16px; flex-direction: column;
+                align-items: stretch; gap: 2px; box-shadow: var(--shadow-md);
+            }
+            .navbar-links.open { display: flex; }
+            .navbar-links a { padding: 12px 14px; font-size: 0.9rem; border-radius: var(--radius-sm); }
+            .hamburger { display: inline-flex; }
+            .hero { padding: calc(var(--nav-height) + 24px) 14px 40px; min-height: auto; }
+            .hero-content {
+                flex-direction: column; text-align: center;
+                gap: 24px; padding: 28px 20px;
+            }
+            .hero-left { align-items: center; }
+            .hero-avatar { width: 120px; height: 120px; font-size: 2.5rem; }
+            .hero-avatar .avatar-fallback { font-size: 2.5rem; }
+            .hero-name { font-size: 2rem; }
+            .hero-tagline, .hero-badges, .hero-actions {
+                justify-content: center; margin-left: auto; margin-right: auto;
+            }
+            .hero-tagline { max-width: 100%; }
+            .section { padding: 40px 16px; }
+            .section-header h2 { font-size: 1.5rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .project-screenshots { grid-template-columns: 1fr; }
+            .certs-grid { grid-template-columns: 1fr; }
+            .highlights-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .highlight-card { padding: 16px 12px; }
+            .highlight-number { font-size: 1.5rem; }
+            .tab-btn { padding: 8px 14px; font-size: 0.82rem; }
+            .tab-panel { padding: 18px 14px; }
+            .back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+            .btn { padding: 10px 18px; font-size: 0.85rem; }
+        }
+        @media (max-width: 480px) {
+            .highlights-grid { grid-template-columns: 1fr; }
+            .hero-badges { gap: 6px; }
+            .badge { padding: 5px 12px; font-size: 0.75rem; }
+            .navbar-brand { font-size: 0.95rem; }
+            .icon-btn { width: 34px; height: 34px; }
+            .icon-btn svg { width: 15px; height: 15px; }
+        }
+
+        @media print {
+            :root {
+                --bg-primary: #ffffff; --bg-secondary: #ffffff; --bg-card: #ffffff;
+                --bg-card-hover: #ffffff; --bg-subtle: #f5f5f5;
+                --text-primary: #111111; --text-secondary: #333333; --text-muted: #555555;
+                --border-color: #dddddd; --border-light: #eeeeee;
+                --shadow-sm: none; --shadow-md: none; --shadow-lg: none; --shadow-hover: none;
+                --nav-height: 0px; --scroll-margin: 0px;
+            }
+            .bg-grass, .bg-veil, .meadow-layer, #bgm { display: none !important; }
+            .navbar, .back-to-top, .toast, .hero-actions .btn, .icon-btn, .hamburger { display: none !important; }
+            body { background: #fff !important; font-size: 12px; line-height: 1.5; color: #111; }
+            html { font-size: 12px !important; }
+            .hero { min-height: auto; padding: 24px 20px; }
+            .hero-content {
+                flex-direction: row; gap: 30px; text-align: left;
+                background: #fff; border: 1px solid #eee;
+                backdrop-filter: none; box-shadow: none; padding: 24px;
+            }
+            .hero-avatar { box-shadow: none; width: 100px; height: 100px; font-size: 2rem; }
+            .hero-avatar .avatar-fallback { font-size: 2rem; }
+            .section { padding: 24px 20px; page-break-inside: avoid; }
+            .tabs-list { display: none; }
+            .tab-panel[hidden] { display: block !important; }
+            .tab-panel { padding: 12px 0; border-bottom: 1px solid #eee; page-break-inside: avoid; }
+            .project-card, .highlight-card, .skill-group, .edu-item, .cert-card {
+                box-shadow: none; border: 1px solid #ddd; break-inside: avoid;
+            }
+            .project-card:hover, .highlight-card:hover, .skill-group:hover,
+            .edu-item:hover, .cert-card:hover { transform: none; box-shadow: none; }
+            .project-screenshots img { max-width: 100%; page-break-inside: avoid; }
+            .footer { border-top: 1px solid #ddd; background: #fff; backdrop-filter: none; }
+            .section-header h2 { font-size: 1.3rem; text-shadow: none; }
+            a { color: #111; text-decoration: none; }
+            .hero-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ══ 背景音乐 ══ -->
+    <audio id="bgm" src="audio.mp3" loop preload="auto" autoplay playsinline webkit-playsinline aria-hidden="true"></audio>
+
+    <!-- ══ 草地背景 ══ -->
+    <div class="bg-grass" aria-hidden="true"></div>
+    <div class="bg-veil" aria-hidden="true"></div>
+    <div class="meadow-layer" id="meadowLayer" aria-hidden="true"></div>
+
+    <!-- ── Navbar ── -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="主导航">
+        <a class="navbar-brand" href="#hero" aria-label="返回首页">
+            <span class="brand-dot"></span>江柯蓉
+        </a>
+        <ul class="navbar-links" id="navLinks" role="menubar">
+            <li role="none"><a href="#highlights" role="menuitem">亮点</a></li>
+            <li role="none"><a href="#experience" role="menuitem">经历</a></li>
+            <li role="none"><a href="#projects" role="menuitem">项目</a></li>
+            <li role="none"><a href="#skills" role="menuitem">技能</a></li>
+            <li role="none"><a href="#education" role="menuitem">教育</a></li>
+            <li role="none"><a href="#contact" role="menuitem">联系</a></li>
+        </ul>
+        <div class="navbar-actions">
+            <button class="icon-btn music-btn" id="musicBtn" type="button"
+                    aria-label="暂停背景音乐" aria-pressed="true" title="暂停背景音乐">
+                <svg id="iconMusicOff" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M9 18V5l12-2v13"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <circle cx="18" cy="16" r="3"/>
+                </svg>
+                <svg id="iconMusicOn" viewBox="0 0 24 24" aria-hidden="true" style="display:none;">
+                    <rect x="7" y="5" width="3.6" height="14" rx="1.2"/>
+                    <rect x="13.4" y="5" width="3.6" height="14" rx="1.2"/>
+                </svg>
+            </button>
+
+            <button class="icon-btn theme-toggle" id="themeToggle" aria-label="切换深浅色模式" title="切换深浅色模式">
+                <svg id="iconSun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                <svg id="iconMoon" viewBox="0 0 24 24" aria-hidden="true" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+            <button class="icon-btn print-btn" id="printBtn" aria-label="打印PDF" title="打印PDF">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg>
+            </button>
+            <button class="icon-btn hamburger" id="hamburgerBtn" aria-label="切换菜单" aria-expanded="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ── Hero ── -->
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="hero-avatar" id="heroAvatar" aria-hidden="true">
+                    <img src="头像.jpg" alt="江柯蓉的头像" id="avatarImg">
+                    <div class="avatar-fallback" id="avatarFallback" style="display:none;">江</div>
+                </div>
+            </div>
+            <div class="hero-right">
+                <h1 class="hero-name">江柯蓉</h1>
+                <p class="hero-title">统计学本科生 · AI辅助应用开发者</p>
+                <p class="hero-tagline">善于借助AI工具将模糊需求转化为可执行的产品方案，独立完成从产品设计到原型搭建的全流程。对学习工具与交互体验充满热情，正在数据分析和产品设计方向持续成长。</p>
+                <div class="hero-badges" id="heroBadges">
+                    <span class="badge">AI应用开发</span>
+                    <span class="badge">提示词工程</span>
+                    <span class="badge">产品思维</span>
+                    <span class="badge">Python基础</span>
+                    <span class="badge">数据分析学习</span>
+                </div>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="tel:17323908696">
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        拨打电话
+                    </a>
+                    <button class="btn btn-outline" id="copyEmailBtn" type="button">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        复制邮箱
+                    </button>
+                    <button class="btn btn-outline" id="copyPhoneBtn" type="button">
+                        <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        复制电话
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ── Highlights ── -->
+    <section class="section" id="highlights" aria-labelledby="highlights-title">
+        <div class="section-header">
+            <h2 id="highlights-title">亮点成果</h2>
+            <p>用数据说话，快速了解我的核心能力</p>
+            <div class="section-divider"></div>
+        </div>
+        <div class="highlights-grid" id="highlightsGrid"></div>
+    </section>
+
+    <!-- ── Experience (Tabs) ── -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="section-header">
+            <h2 id="experience-title">经历</h2>
+            <p>以项目实践为证，探索能力边界</p>
+            <div class="section-divider"></div>
+        </div>
+        <div class="tabs-container" id="experienceTabs">
+            <div class="tabs-list" role="tablist" aria-label="经历分类" id="experienceTabList"></div>
+            <div id="experiencePanels"></div>
+        </div>
+    </section>
+
+    <!-- ── Projects (Tabs) ── -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-header">
+            <h2 id="projects-title">项目经历</h2>
+            <p>每一个项目都是一次从零到一的实践</p>
+            <div class="section-divider"></div>
+        </div>
+        <div class="tabs-container" id="projectsTabs">
+            <div class="tabs-list" role="tablist" aria-label="项目列表" id="projectTabList"></div>
+            <div id="projectPanels"></div>
+        </div>
+    </section>
+
+    <!-- ── Skills ── -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="section-header">
+            <h2 id="skills-title">技能矩阵</h2>
+            <p>持续学习，不断精进</p>
+            <div class="section-divider"></div>
+        </div>
+        <div class="skills-container" id="skillsContainer"></div>
+    </section>
+
+    <!-- ── Education & Certificates ── -->
+    <section class="section" id="education" aria-labelledby="education-title">
+        <div class="section-header">
+            <h2 id="education-title">教育与证书</h2>
+            <p>扎实的学术基础与持续的专业认证</p>
+            <div class="section-divider"></div>
+        </div>
+        <div class="edu-timeline" id="eduTimeline"></div>
+        <div class="certs-grid" id="certsGrid"></div>
+    </section>
+
+    <!-- ── Contact / Footer ── -->
+    <footer class="footer" id="contact">
+        <p>© 2026 江柯蓉 · 重庆 · 最后更新：2026年9月</p>
+        <div class="footer-links">
+            <a href="tel:17323908696">电话：17323908696</a>
+            <a href="mailto:430468971@qq.com">邮箱：430468971@qq.com</a>
+            <span>现居地：重庆</span>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="返回顶部" title="返回顶部">
+        <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script>
+        (function() {
+            // ══════════════════════════════════
+            //  A. 设备探测与自适应缩放
+            // ══════════════════════════════════
+            const DeviceDetector = {
+                detect() {
+                    const ua = navigator.userAgent || '';
+                    const width = window.innerWidth;
+                    const height = window.innerHeight;
+                    const hasTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
+                    const isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+                    const isIPadOS = /Macintosh/.test(ua) && navigator.maxTouchPoints > 1;
+                    const isAndroid = /Android/i.test(ua);
+                    const isMobileUA = isIOS || /webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua) || (isAndroid && /Mobile/i.test(ua));
+                    const isTabletUA = isIPadOS || /iPad/i.test(ua) || (isAndroid && !/Mobile/i.test(ua)) || /Tablet|PlayBook|Silk/i.test(ua);
+                    let device;
+                    if (isMobileUA || width < 640) device = 'mobile';
+                    else if (isTabletUA || width < 1024) device = 'tablet';
+                    else device = 'desktop';
+                    let orientation;
+                    if (screen.orientation && screen.orientation.type) {
+                        orientation = screen.orientation.type.indexOf('portrait') === 0 ? 'portrait' : 'landscape';
+                    } else {
+                        orientation = height > width ? 'portrait' : 'landscape';
+                    }
+                    const dpr = window.devicePixelRatio || 1;
+                    return { device, orientation, width, height, dpr, hasTouch, isIOS, isAndroid, isIPadOS };
+                },
+                apply() {
+                    const info = this.detect();
+                    const root = document.documentElement;
+                    root.setAttribute('data-device', info.device);
+                    root.setAttribute('data-orientation', info.orientation);
+                    root.setAttribute('data-touch', info.hasTouch ? 'true' : 'false');
+                    root.setAttribute('data-dpr', String(Math.min(Math.round(info.dpr * 10) / 10, 3)));
+                    if (info.isIOS || info.isIPadOS) root.setAttribute('data-os', 'ios');
+                    else if (info.isAndroid) root.setAttribute('data-os', 'android');
+                    else root.setAttribute('data-os', 'other');
+
+                    let baseFont = 16, uiScale = 1;
+                    if (info.device === 'mobile') {
+                        if (info.width < 340) { baseFont = 12.5; uiScale = 0.86; }
+                        else if (info.width < 375) { baseFont = 13; uiScale = 0.90; }
+                        else if (info.width < 414) { baseFont = 13.5; uiScale = 0.94; }
+                        else { baseFont = 14; uiScale = 0.97; }
+                        if (info.orientation === 'landscape') { baseFont = 12.5; uiScale = 0.82; }
+                    } else if (info.device === 'tablet') {
+                        if (info.width < 820) { baseFont = 14.5; uiScale = 0.97; }
+                        else { baseFont = 15.5; uiScale = 1; }
+                        if (info.orientation === 'landscape' && info.width < 1100) uiScale = 0.95;
+                    } else {
+                        if (info.width >= 2560) { baseFont = 18; uiScale = 1.12; }
+                        else if (info.width >= 1920) { baseFont = 17; uiScale = 1.06; }
+                        else if (info.width >= 1440) { baseFont = 16; uiScale = 1; }
+                        else if (info.width >= 1180) { baseFont = 15.5; uiScale = 0.98; }
+                        else { baseFont = 15; uiScale = 0.94; }
+                    }
+                    root.style.setProperty('--ui-scale', uiScale.toFixed(3));
+                    root.style.setProperty('--base-font', baseFont + 'px');
+                    root.style.fontSize = baseFont + 'px';
+                    const vh = info.height * 0.01;
+                    root.style.setProperty('--vh', vh + 'px');
+                    root.style.setProperty('--app-height', info.height + 'px');
+                    if (document.body) document.body.style.fontSize = (baseFont * 0.94).toFixed(2) + 'px';
+                    window.__deviceInfo = info;
+                    return info;
+                },
+                bind(onChange) {
+                    let last = { w: window.innerWidth, h: window.innerHeight, o: this.detect().orientation };
+                    let raf = null;
+                    const self = this;
+                    const handler = () => {
+                        if (raf) cancelAnimationFrame(raf);
+                        raf = requestAnimationFrame(() => {
+                            const w = window.innerWidth;
+                            const h = window.innerHeight;
+                            const o = self.detect().orientation;
+                            const changed = Math.abs(w - last.w) > 16 || Math.abs(h - last.h) > 16 || o !== last.o;
+                            if (changed) {
+                                last = { w, h, o };
+                                const info = self.apply();
+                                if (typeof onChange === 'function') onChange(info);
+                            }
+                        });
+                    };
+                    window.addEventListener('resize', handler, { passive: true });
+                    window.addEventListener('orientationchange', () => setTimeout(handler, 180));
+                    if (screen.orientation && screen.orientation.addEventListener) {
+                        screen.orientation.addEventListener('change', () => setTimeout(handler, 180));
+                    }
+                }
+            };
+            DeviceDetector.apply();
+
+            // ══════════════════════════════════
+            //  Toast 工具
+            // ══════════════════════════════════
+            const toast = document.getElementById('toast');
+            let toastTimer;
+            function showToast(msg) {
+                if (!toast) return;
+                toast.textContent = msg;
+                toast.classList.add('show');
+                clearTimeout(toastTimer);
+                toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
+            }
+
+            // ══════════════════════════════════
+            //  头像加载失败回退
+            // ══════════════════════════════════
+            const avatarImg = document.getElementById('avatarImg');
+            const avatarFallback = document.getElementById('avatarFallback');
+            if (avatarImg && avatarFallback) {
+                avatarImg.addEventListener('error', function() {
+                    this.style.display = 'none';
+                    avatarFallback.style.display = 'flex';
+                });
+                if (avatarImg.complete && avatarImg.naturalWidth === 0) {
+                    avatarImg.style.display = 'none';
+                    avatarFallback.style.display = 'flex';
+                }
+            }
+
+            // ══════════════════════════════════
+            //  背景音乐控制（自动播放强化版）
+            // ══════════════════════════════════
+            const bgm = document.getElementById('bgm');
+            const musicBtn = document.getElementById('musicBtn');
+            const iconMusicOff = document.getElementById('iconMusicOff');
+            const iconMusicOn = document.getElementById('iconMusicOn');
+            const MUSIC_KEY = 'resume-music-on';
+            const MUSIC_VOLUME = 0.35;
+
+            let isMusicPlaying = false;
+            let musicAvailable = true;
+            let userPaused = false;
+
+            function readMusicPref() {
+                try { return localStorage.getItem(MUSIC_KEY); } catch (e) { return null; }
+            }
+            function saveMusicPref(on) {
+                try { localStorage.setItem(MUSIC_KEY, on ? '1' : '0'); } catch (e) {}
+            }
+            function setMusicUI(playing) {
+                isMusicPlaying = playing;
+                if (playing) {
+                    musicBtn.classList.add('active');
+                    musicBtn.classList.remove('music-hint');
+                    musicBtn.setAttribute('aria-pressed', 'true');
+                    musicBtn.setAttribute('aria-label', '暂停背景音乐');
+                    musicBtn.title = '暂停背景音乐';
+                    iconMusicOff.style.display = 'none';
+                    iconMusicOn.style.display = 'inline';
+                } else {
+                    musicBtn.classList.remove('active');
+                    musicBtn.setAttribute('aria-pressed', 'false');
+                    musicBtn.setAttribute('aria-label', '播放背景音乐');
+                    musicBtn.title = '播放背景音乐';
+                    iconMusicOff.style.display = 'inline';
+                    iconMusicOn.style.display = 'none';
+                }
+            }
+            function showMusicHint() { musicBtn.classList.add('music-hint'); }
+            function clearMusicHint() { musicBtn.classList.remove('music-hint'); }
+
+            function playMusic() {
+                if (!musicAvailable) return Promise.resolve(false);
+                try { bgm.volume = MUSIC_VOLUME; } catch (e) {}
+                const p = bgm.play();
+                if (p && typeof p.then === 'function') {
+                    return p.then(function() {
+                        setMusicUI(true);
+                        clearMusicHint();
+                        userPaused = false;
+                        return true;
+                    }).catch(function() {
+                        setMusicUI(false);
+                        return false;
+                    });
+                }
+                const ok = !bgm.paused;
+                setMusicUI(ok);
+                if (ok) clearMusicHint();
+                return Promise.resolve(ok);
+            }
+            function pauseMusic() {
+                try { bgm.pause(); } catch (e) {}
+                setMusicUI(false);
+            }
+
+            bgm.addEventListener('error', function() {
+                musicAvailable = false;
+                musicBtn.style.display = 'none';
+            });
+            bgm.addEventListener('ended', function() { setMusicUI(false); });
+
+            let lastTouchTs = 0;
+            function onButtonTap(e) {
+                if (e) {
+                    if (e.type === 'touchend') {
+                        lastTouchTs = Date.now();
+                        if (e.cancelable) { try { e.preventDefault(); } catch (err) {} }
+                    } else if (e.type === 'click') {
+                        if (Date.now() - lastTouchTs < 500) return;
+                    }
+                }
+                clearMusicHint();
+                if (isMusicPlaying) {
+                    userPaused = true;
+                    pauseMusic();
+                    saveMusicPref(false);
+                } else {
+                    userPaused = false;
+                    if (!musicAvailable) return;
+                    try { bgm.volume = MUSIC_VOLUME; } catch (err) {}
+                    bgm.play().then(function() {
+                        setMusicUI(true);
+                        saveMusicPref(true);
+                    }).catch(function() {
+                        showToast('播放失败，请再点击一次');
+                        showMusicHint();
+                    });
+                }
+            }
+            if (window.PointerEvent) {
+                musicBtn.addEventListener('pointerdown', onButtonTap);
+            } else {
+                musicBtn.addEventListener('touchend', onButtonTap, { passive: false });
+            }
+            musicBtn.addEventListener('click', function(e) {
+                if (Date.now() - lastTouchTs < 500) return;
+                onButtonTap(e);
+            });
+
+            // 自动播放逻辑
+            const storedPref = readMusicPref();
+            const shouldAutoplay = storedPref !== '0';
+
+            if (shouldAutoplay) {
+                playMusic().then(ok => {
+                    if (ok) {
+                        saveMusicPref(true);
+                    } else {
+                        const unlockEvents = ['click', 'touchstart', 'touchend', 'keydown', 'scroll', 'wheel', 'mousemove', 'pointerdown'];
+                        let unlocked = false;
+                        function unlockMusic(e) {
+                            if (unlocked || isMusicPlaying || userPaused) return;
+                            if (e && e.target && (e.target === musicBtn || musicBtn.contains(e.target))) return;
+                            try { bgm.volume = MUSIC_VOLUME; } catch (err) {}
+                            bgm.play().then(function() {
+                                setMusicUI(true);
+                                saveMusicPref(true);
+                                unlocked = true;
+                                removeUnlockListeners();
+                            }).catch(function() {});
+                        }
+                        function removeUnlockListeners() {
+                            unlockEvents.forEach(ev => {
+                                document.removeEventListener(ev, unlockMusic, true);
+                            });
+                        }
+                        unlockEvents.forEach(ev => {
+                            document.addEventListener(ev, unlockMusic, true);
+                        });
+                        showMusicHint();
+                        setTimeout(() => {
+                            if (!isMusicPlaying && musicAvailable && !userPaused) {
+                                showToast('轻触页面任意位置，开启背景音乐');
+                            }
+                        }, 1500);
+                    }
+                });
+            } else {
+                setMusicUI(false);
+            }
+
+            // ══════════════════════════════════
+            //  草地生成
+            // ══════════════════════════════════
+            function initMeadow() {
+                const layer = document.getElementById('meadowLayer');
+                if (!layer) return;
+                layer.innerHTML = '';
+                const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                const isMobile = window.innerWidth < 768;
+                const foxtailCount = isMobile ? 26 : 54;
+                const bladeCount = isMobile ? 34 : 74;
+                const frag = document.createDocumentFragment();
+
+                for (let i = 0; i < foxtailCount; i++) {
+                    const depth = Math.random();
+                    const scale = 0.5 + depth * 0.95;
+                    const opacity = (0.3 + depth * 0.65).toFixed(2);
+                    const blurPx = (1 - depth) * 1.6;
+                    const stalkH = (72 + Math.random() * 90) * scale;
+                    const grainH = (26 + Math.random() * 30) * scale;
+                    const grainW = (7 + Math.random() * 7) * scale;
+                    const fx = document.createElement('div');
+                    fx.className = 'foxtail';
+                    fx.style.left = (Math.random() * 106 - 3) + '%';
+                    fx.style.marginLeft = (-grainW / 2).toFixed(1) + 'px';
+                    fx.style.bottom = (-10 + depth * 22).toFixed(1) + 'px';
+                    fx.style.opacity = opacity;
+                    if (blurPx > 0.08) fx.style.filter = 'blur(' + blurPx.toFixed(2) + 'px)';
+                    fx.style.zIndex = String(Math.round(depth * 100));
+                    fx.style.setProperty('--stalk-h', stalkH.toFixed(1) + 'px');
+                    fx.style.setProperty('--grain-h', grainH.toFixed(1) + 'px');
+                    fx.style.setProperty('--grain-w', grainW.toFixed(1) + 'px');
+                    const dur = 2.2 + Math.random() * 3.2;
+                    const amp = 2.2 + Math.random() * 3.6;
+                    const base = (Math.random() * 10 - 5).toFixed(2) + 'deg';
+                    if (reduceMotion) {
+                        fx.style.animation = 'none';
+                        fx.style.transform = 'rotate(' + base + ')';
+                    } else {
+                        fx.style.setProperty('--sway-dur', dur.toFixed(2) + 's');
+                        fx.style.setProperty('--sway-delay', (-Math.random() * dur).toFixed(2) + 's');
+                        fx.style.setProperty('--sway-amp', amp.toFixed(2));
+                        fx.style.setProperty('--sway-base', base);
+                    }
+                    const stalk = document.createElement('div');
+                    stalk.className = 'stalk';
+                    const grain = document.createElement('div');
+                    grain.className = 'grain';
+                    fx.appendChild(stalk);
+                    fx.appendChild(grain);
+                    frag.appendChild(fx);
+                }
+
+                for (let i = 0; i < bladeCount; i++) {
+                    const depth = Math.random();
+                    const scale = 0.5 + depth * 1.0;
+                    const bh = (48 + Math.random() * 80) * scale;
+                    const bw = (3 + Math.random() * 3) * scale;
+                    const opacity = (0.35 + depth * 0.6).toFixed(2);
+                    const blurPx = (1 - depth) * 1.4;
+                    const bl = document.createElement('div');
+                    bl.className = 'blade';
+                    bl.style.left = (Math.random() * 106 - 3) + '%';
+                    bl.style.marginLeft = (-bw / 2).toFixed(1) + 'px';
+                    bl.style.bottom = (-8 + depth * 16).toFixed(1) + 'px';
+                    bl.style.opacity = opacity;
+                    if (blurPx > 0.08) bl.style.filter = 'blur(' + blurPx.toFixed(2) + 'px)';
+                    bl.style.zIndex = String(Math.round(depth * 100));
+                    bl.style.setProperty('--bw', bw.toFixed(1) + 'px');
+                    bl.style.setProperty('--bh', bh.toFixed(1) + 'px');
+                    const bdur = 2.6 + Math.random() * 3.0;
+                    const bamp = 3 + Math.random() * 6;
+                    const bbase = (Math.random() * 12 - 6).toFixed(2) + 'deg';
+                    if (reduceMotion) {
+                        bl.style.animation = 'none';
+                        bl.style.transform = 'rotate(' + bbase + ')';
+                    } else {
+                        bl.style.setProperty('--bdur', bdur.toFixed(2) + 's');
+                        bl.style.setProperty('--bdelay', (-Math.random() * bdur).toFixed(2) + 's');
+                        bl.style.setProperty('--bamp', bamp.toFixed(2));
+                        bl.style.setProperty('--bbase', bbase);
+                    }
+                    frag.appendChild(bl);
+                }
+                layer.appendChild(frag);
+            }
+            initMeadow();
+            DeviceDetector.bind(function() { initMeadow(); });
+
+            // ══════════════════════════════════
+            //  简历数据
+            // ══════════════════════════════════
+            const resume = {
+                name: '江柯蓉',
+                phone: '17323908696',
+                email: '430468971@qq.com',
+                location: '重庆',
+                title: '统计学本科生 · AI辅助应用开发者',
+                tagline: '善于借助AI工具将模糊需求转化为可执行的产品方案，独立完成从产品设计到原型搭建的全流程。对学习工具与交互体验充满热情，正在数据分析和产品设计方向持续成长。',
+                badges: ['AI应用开发', '提示词工程', '产品思维', 'Python基础', '数据分析学习'],
+                highlights: [
+                    { number: '3', label: '独立完成AI辅助应用开发' },
+                    { number: '10+', label: '关键词抽取器覆盖学科领域' },
+                    { number: '40%', label: '学习检索效率提升' },
+                    { number: '1500+', label: '预制四六级核心词汇' },
+                    { number: '5+', label: '单词记忆模式与小游戏' },
+                ],
+                experience: [{
+                    id: 'practice', label: '实践经历',
+                    items: [{
+                        title: 'AI辅助应用开发实践', org: '个人项目', date: '2026.07 – 2026.08',
+                        desc: '暂无正式实习经历，以下项目实践作为能力证明。通过AI平台独立完成3个小型应用的产品设计与提示词生成，覆盖学习工具与游戏娱乐方向。',
+                        bullets: [
+                            '负责产品需求定义与功能设计，将模糊需求转化为可执行方案',
+                            '运用Trae、IMA、WorkBuddy等AI开发平台进行应用原型搭建与迭代优化',
+                            '完成从词库结构设计到游戏机制规划的全流程实践',
+                            '培养需求分析、功能拆解与快速迭代的产品思维',
+                        ],
+                    }],
+                }, {
+                    id: 'education', label: '教育经历',
+                    items: [{
+                        title: '重庆工商大学 数学与统计学院', org: '统计学 本科',
+                        date: '2026.09 – 2030.06（预期）',
+                        desc: '主修课程：高等数学、线性代数、概率论与数理统计、统计学导论、数据分析基础、程序设计基础等。',
+                        bullets: [],
+                    }],
+                }],
+                projects: [{
+                    id: 'keyword-extractor', name: '多领域概念关键词抽取器',
+                    meta: 'AI辅助开发 · 个人项目 · 2026.07–2026.08',
+                    tags: ['提示词工程', 'AI应用', '知识管理'],
+                    summary: '通过AI平台编写提示词生成应用框架，实现输入任意主题自动抽取核心关键词，覆盖10+学科领域。',
+                    bullets: [
+                        '负责产品需求定义与功能设计，通过AI平台编写提示词生成应用框架与核心逻辑',
+                        '覆盖哲学、经济学、计算机科学、心理学等10+学科领域，帮助快速建立跨领域知识索引',
+                        '个人学习检索效率提升约40%，辅助完成多个陌生领域概念梳理与笔记整理',
+                    ],
+                    screenshots: ['历史记录.png', '页面.png'],
+                }, {
+                    id: 'word-memory', name: '个性化单词记忆小程序',
+                    meta: 'AI辅助开发 · 个人项目 · 2026.07–2026.08',
+                    tags: ['产品设计', 'AI应用', '学习工具'],
+                    summary: '主导产品功能规划与词库结构设计，集成艾宾浩斯遗忘曲线与5+记忆模式，提升背词趣味性。',
+                    bullets: [
+                        '主导产品功能规划与词库结构设计，实现四六级预制词库及自定义词库功能',
+                        '集成艾宾浩斯遗忘曲线、拼写测试、听音辨义、单词配对、词义选择等5种以上记忆模式',
+                        '预制词库覆盖四六级核心词汇约1500个，自定义词库容量不设上限',
+                        '支持用户自行添加、分类和标记单词掌握程度，提升用户留存',
+                    ],
+                    screenshots: ['记忆.png', '游戏.png'],
+                }, {
+                    id: 'tank-battle', name: '科技风坦克大战小游戏',
+                    meta: 'AI辅助开发 · 个人项目 · 2026.07–2026.08',
+                    tags: ['游戏开发', 'AI应用', '交互设计'],
+                    summary: '使用Trae等AI工具生成完整可玩的坦克大战游戏，实现科技视觉风格与完整游戏机制。',
+                    bullets: [
+                        '通过编写详细提示词与多轮调试，利用Trae等AI生成完整可玩的坦克大战小游戏',
+                        '实现科技视觉风格、敌方AI、障碍物与实时得分系统',
+                        '完成游戏机制设计，设置多个关卡和模式，支持键盘操作、音效开关与分数记录',
+                        '提升游戏可玩性与挑战感，锻炼产品思维与调试能力',
+                    ],
+                    screenshots: ['首页.png', '闯关模式.png', '远征模式.png', 'buff.png'],
+                }],
+                skills: [{
+                    name: 'AI工具应用', icon: '🤖',
+                    tags: ['Trae', 'IMA', 'WorkBuddy', '提示词工程', 'AI协作开发'],
+                    level: 78, levelLabel: '熟练',
+                }, {
+                    name: '编程语言', icon: '🐍',
+                    tags: ['Python基础', '数据处理脚本', 'AI辅助编程'],
+                    level: 42, levelLabel: '基础',
+                }, {
+                    name: '应用开发', icon: '⚡',
+                    tags: ['AI辅助开发', '产品设计', '原型搭建', '功能调试'],
+                    level: 70, levelLabel: '实践',
+                }, {
+                    name: '产品思维', icon: '🎯',
+                    tags: ['需求分析', '功能拆解', '用户反馈', '快速迭代'],
+                    level: 72, levelLabel: '良好',
+                }, {
+                    name: '数据分析', icon: '📊',
+                    tags: ['统计学基础', '数据分析学习', '知识库搭建'],
+                    level: 25, levelLabel: '学习',
+                }],
+                education: [{
+                    school: '重庆工商大学 数学与统计学院', degree: '统计学 本科',
+                    date: '2026.09 – 2030.06（预期）',
+                    courses: '主修课程：高等数学、线性代数、概率论与数理统计、统计学导论、数据分析基础、程序设计基础等',
+                }],
+                certificates: [
+                    { icon: '📜', text: '阿里云高级 AI 证书', image: '阿里云高级ai证书.jpg' },
+                    { icon: '📜', text: '阿里云利用大模型提升内容生产能力证书', image: '阿里云利用大模型提升内容生产能力证书.png' },
+                    { icon: '📜', text: '阿里云 Vision 人工智能设计进阶证书', image: '阿里云vision人工智能设计进阶证书.png' },
+                    { icon: '📜', text: '阿里云基于通义灵码实现高效AI编码实践证书', image: '阿里云基于通义灵码实现高效ai编码实践证书.png' },
+                    { icon: '📜', text: '讯飞 Prompt 工程师认证', image: '讯飞prompt工程师认证.png' },
+                ],
+                lastUpdated: '2026年9月',
+            };
+
+            // ══════════════════════════════════
+            //  DOM Helpers
+            // ══════════════════════════════════
+            const $ = (sel, ctx) => (ctx || document).querySelector(sel);
+            const $$ = (sel, ctx) => Array.from((ctx || document).querySelectorAll(sel));
+
+            function el(tag, attrs = {}, children = []) {
+                const node = document.createElement(tag);
+                Object.entries(attrs).forEach(([key, val]) => {
+                    if (key === 'class') node.className = val;
+                    else if (key === 'html') node.innerHTML = val;
+                    else if (key === 'text') node.textContent = val;
+                    else if (key.startsWith('on')) node.addEventListener(key.slice(2), val);
+                    else if (key === 'dataset') Object.entries(val).forEach(([k, v]) => node.dataset[k] = v);
+                    else if (key === 'style') Object.assign(node.style, val);
+                    else if (val !== null && val !== undefined) node.setAttribute(key, val);
+                });
+                children.forEach(c => {
+                    if (c === null || c === undefined) return;
+                    if (typeof c === 'string' || typeof c === 'number') node.appendChild(document.createTextNode(c));
+                    else node.appendChild(c);
+                });
+                return node;
+            }
+
+            // ─── Highlights ───
+            const highlightsGrid = $('#highlightsGrid');
+            resume.highlights.forEach(h => {
+                highlightsGrid.appendChild(el('div', { class: 'highlight-card' }, [
+                    el('div', { class: 'highlight-number', text: h.number }),
+                    el('div', { class: 'highlight-label', text: h.label }),
+                ]));
+            });
+
+            // ─── Tabs ───
+            function createTabs(container, tabsData, panelsData, tabListId, panelsId) {
+                const tabList = $('#' + tabListId, container) || el('div', {
+                    class: 'tabs-list', role: 'tablist', id: tabListId, 'aria-label': '标签页'
+                });
+                const panelsContainer = $('#' + panelsId, container) || el('div', { id: panelsId });
+
+                tabsData.forEach((tab, idx) => {
+                    const btn = el('button', {
+                        class: 'tab-btn', role: 'tab',
+                        id: tabListId + '-tab-' + idx,
+                        'aria-selected': idx === 0 ? 'true' : 'false',
+                        'aria-controls': panelsId + '-panel-' + idx,
+                        'tabindex': idx === 0 ? '0' : '-1',
+                        text: tab.label,
+                        dataset: { index: idx },
+                    });
+                    btn.addEventListener('click', () => selectTab(tabListId, panelsId, idx));
+                    btn.addEventListener('keydown', (e) => handleTabKeydown(e, tabListId, panelsId, idx, tabsData.length));
+                    tabList.appendChild(btn);
+                });
+
+                tabsData.forEach((tab, idx) => {
+                    const panel = el('div', {
+                        class: 'tab-panel', role: 'tabpanel',
+                        id: panelsId + '-panel-' + idx,
+                        'aria-labelledby': tabListId + '-tab-' + idx,
+                        hidden: idx !== 0 ? 'hidden' : null,
+                    });
+                    const content = panelsData[idx] || [];
+                    content.forEach(item => panel.appendChild(item));
+                    panelsContainer.appendChild(panel);
+                });
+
+                if (!tabList.parentNode) container.appendChild(tabList);
+                if (!panelsContainer.parentNode) container.appendChild(panelsContainer);
+
+                function selectTab(tabListId, panelsId, idx) {
+                    const tabBtns = $$('#' + tabListId + ' .tab-btn');
+                    const panels = $$('#' + panelsId + ' .tab-panel');
+                    tabBtns.forEach((btn, i) => {
+                        const isSelected = i === idx;
+                        btn.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+                        btn.setAttribute('tabindex', isSelected ? '0' : '-1');
+                    });
+                    panels.forEach((panel, i) => {
+                        if (i === idx) panel.removeAttribute('hidden');
+                        else panel.setAttribute('hidden', 'hidden');
+                    });
+                }
+                function handleTabKeydown(e, tabListId, panelsId, idx, total) {
+                    let newIdx = null;
+                    if (e.key === 'ArrowRight') newIdx = (idx + 1) % total;
+                    else if (e.key === 'ArrowLeft') newIdx = (idx - 1 + total) % total;
+                    else if (e.key === 'Home') newIdx = 0;
+                    else if (e.key === 'End') newIdx = total - 1;
+                    if (newIdx !== null) {
+                        e.preventDefault();
+                        const btns = $$('#' + tabListId + ' .tab-btn');
+                        selectTab(tabListId, panelsId, newIdx);
+                        btns[newIdx].focus();
+                    }
+                }
+                return { selectTab };
+            }
+
+            // ─── Experience Tabs ───
+            const expTabListId = 'experienceTabList';
+            const expPanelsId = 'experiencePanels';
+            const expTabsData = resume.experience.map(e => ({ label: e.label }));
+            const expPanelsData = resume.experience.map(e => {
+                return e.items.map(item => {
+                    return el('div', { class: 'exp-item' }, [
+                        el('div', { class: 'exp-header' }, [
+                            el('span', { class: 'exp-title', text: item.title }),
+                            el('span', { class: 'exp-org', text: item.org }),
+                            el('span', { class: 'exp-date', text: item.date }),
+                        ]),
+                        el('div', { class: 'exp-desc' }, [
+                            el('span', { text: item.desc }),
+                            item.bullets && item.bullets.length > 0 ?
+                            el('ul', {}, item.bullets.map(b => el('li', { text: b }))) : null,
+                        ]),
+                    ]);
+                });
+            });
+            const expTabsContainer = $('#experienceTabs');
+            const oldExpTabList = $('#' + expTabListId, expTabsContainer);
+            const oldExpPanels = $('#' + expPanelsId, expTabsContainer);
+            if (oldExpTabList) oldExpTabList.remove();
+            if (oldExpPanels) oldExpPanels.remove();
+            const newExpTabList = el('div', { class: 'tabs-list', role: 'tablist', id: expTabListId, 'aria-label': '经历分类' });
+            const newExpPanels = el('div', { id: expPanelsId });
+            expTabsContainer.appendChild(newExpTabList);
+            expTabsContainer.appendChild(newExpPanels);
+            createTabs(expTabsContainer, expTabsData, expPanelsData, expTabListId, expPanelsId);
+
+            // ─── Project Tabs ───
+            const projTabListId = 'projectTabList';
+            const projPanelsId = 'projectPanels';
+            const projTabsData = resume.projects.map(p => ({ label: p.name }));
+            const projPanelsData = resume.projects.map(p => {
+                const cardChildren = [
+                    el('h3', { text: p.name }),
+                    el('div', { class: 'project-meta' }, [
+                        el('span', { class: 'meta-tag', text: p.meta }),
+                        ...p.tags.map(t => el('span', { class: 'meta-tag', text: t })),
+                    ]),
+                    el('p', { text: p.summary }),
+                    el('ul', {}, p.bullets.map(b => el('li', { text: b }))),
+                ];
+
+                if (p.screenshots && p.screenshots.length > 0) {
+                    const screenshotsContainer = el('div', { class: 'project-screenshots' });
+                    p.screenshots.forEach(file => {
+                        const img = el('img', {
+                            src: file,
+                            alt: p.name + '截图',
+                            loading: 'lazy',
+                        });
+                        img.addEventListener('error', function() {
+                            const wrapper = this.parentElement;
+                            if (wrapper) wrapper.remove();
+                            if (screenshotsContainer.children.length === 0) {
+                                screenshotsContainer.remove();
+                            }
+                        });
+                        const caption = file.replace('.png', '').replace('.jpg', '');
+                        const wrapper = el('div', { class: 'screenshot-wrapper' }, [
+                            img,
+                            el('div', { class: 'screenshot-caption', text: caption }),
+                        ]);
+                        screenshotsContainer.appendChild(wrapper);
+                    });
+                    cardChildren.push(screenshotsContainer);
+                }
+
+                return [el('div', { class: 'project-card' }, cardChildren)];
+            });
+            const projTabsContainer = $('#projectsTabs');
+            const oldProjTabList = $('#' + projTabListId, projTabsContainer);
+            const oldProjPanels = $('#' + projPanelsId, projTabsContainer);
+            if (oldProjTabList) oldProjTabList.remove();
+            if (oldProjPanels) oldProjPanels.remove();
+            const newProjTabList = el('div', { class: 'tabs-list', role: 'tablist', id: projTabListId, 'aria-label': '项目列表' });
+            const newProjPanels = el('div', { id: projPanelsId });
+            projTabsContainer.appendChild(newProjTabList);
+            projTabsContainer.appendChild(newProjPanels);
+            createTabs(projTabsContainer, projTabsData, projPanelsData, projTabListId, projPanelsId);
+
+            // ─── Skills ───
+            const skillsContainer = $('#skillsContainer');
+            resume.skills.forEach(s => {
+                const group = el('div', { class: 'skill-group' }, [
+                    el('h4', {}, [
+                        el('span', { class: 'skill-icon', text: s.icon }),
+                        el('span', { text: s.name }),
+                    ]),
+                    el('div', { class: 'skill-tags' }, s.tags.map(t => el('span', { class: 'skill-tag', text: t }))),
+                    el('div', { class: 'skill-level' }, [
+                        el('div', { class: 'skill-level-bar' }, [
+                            el('div', {
+                                class: 'skill-level-fill',
+                                style: { width: '0%' },
+                                dataset: { targetWidth: s.level + '%' },
+                            }),
+                        ]),
+                        el('span', { class: 'skill-level-label', text: s.levelLabel }),
+                    ]),
+                ]);
+                skillsContainer.appendChild(group);
+            });
+            const skillFills = $$('.skill-level-fill');
+            const skillObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const fill = entry.target;
+                        fill.style.width = fill.dataset.targetWidth;
+                        skillObserver.unobserve(fill);
+                    }
+                });
+            }, { threshold: 0.3 });
+            skillFills.forEach(f => skillObserver.observe(f));
+
+            // ─── Education ───
+            const eduTimeline = $('#eduTimeline');
+            resume.education.forEach(edu => {
+                eduTimeline.appendChild(el('div', { class: 'edu-item' }, [
+                    el('h4', { text: edu.school }),
+                    el('div', { class: 'edu-sub', text: edu.degree + ' · ' + edu.date }),
+                    el('div', { class: 'edu-courses', text: edu.courses }),
+                ]));
+            });
+
+            // ─── Certificates（含证书图片） ───
+            const certsGrid = $('#certsGrid');
+            resume.certificates.forEach(cert => {
+                const cardChildren = [
+                    el('div', { class: 'cert-head' }, [
+                        el('span', { class: 'cert-icon', text: cert.icon }),
+                        el('span', { class: 'cert-text', text: cert.text }),
+                    ]),
+                ];
+                if (cert.image) {
+                    const imgWrap = el('div', { class: 'cert-image-wrap' });
+                    const img = el('img', {
+                        src: cert.image,
+                        alt: cert.text,
+                        loading: 'lazy',
+                    });
+                    img.addEventListener('error', function() {
+                        imgWrap.style.display = 'none';
+                    });
+                    imgWrap.appendChild(img);
+                    cardChildren.push(imgWrap);
+                }
+                certsGrid.appendChild(el('div', { class: 'cert-card' }, cardChildren));
+            });
+            if (resume.certificates.length === 0) {
+                certsGrid.style.display = 'none';
+            }
+
+            // ══════════════════════════════════
+            //  主题切换
+            // ══════════════════════════════════
+            const themeToggle = $('#themeToggle');
+            const iconSun = $('#iconSun');
+            const iconMoon = $('#iconMoon');
+            const root = document.documentElement;
+
+            function getStoredTheme() {
+                try { return localStorage.getItem('resume-theme'); } catch (e) { return null; }
+            }
+            function setTheme(theme, persist) {
+                if (theme === 'dark') {
+                    root.setAttribute('data-theme', 'dark');
+                    iconSun.style.display = 'none';
+                    iconMoon.style.display = 'inline';
+                } else {
+                    root.removeAttribute('data-theme');
+                    iconSun.style.display = 'inline';
+                    iconMoon.style.display = 'none';
+                }
+                if (persist) {
+                    try { localStorage.setItem('resume-theme', theme); } catch (e) {}
+                }
+            }
+            const storedTheme = getStoredTheme();
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (storedTheme) setTheme(storedTheme, false);
+            else if (prefersDark) setTheme('dark', false);
+            else setTheme('light', false);
+
+            themeToggle.addEventListener('click', () => {
+                const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+                setTheme(current === 'dark' ? 'light' : 'dark', true);
+            });
+
+            // ══════════════════════════════════
+            //  复制按钮
+            // ══════════════════════════════════
+            function buildEmail() {
+                const user = '430468971';
+                const domain = 'qq.com';
+                return user + '@' + domain;
+            }
+            async function copyText(text, label) {
+                try {
+                    await navigator.clipboard.writeText(text);
+                    showToast(label + '已复制：' + text);
+                } catch (e) {
+                    const ta = document.createElement('textarea');
+                    ta.value = text;
+                    ta.style.position = 'fixed';
+                    ta.style.opacity = '0';
+                    document.body.appendChild(ta);
+                    ta.select();
+                    try {
+                        document.execCommand('copy');
+                        showToast(label + '已复制：' + text);
+                    } catch (e2) {
+                        showToast('复制失败，请手动复制');
+                    }
+                    ta.remove();
+                }
+            }
+            const copyEmailBtn = $('#copyEmailBtn');
+            const copyPhoneBtn = $('#copyPhoneBtn');
+            copyEmailBtn.addEventListener('click', () => copyText(buildEmail(), '邮箱'));
+            copyPhoneBtn.addEventListener('click', () => copyText(resume.phone, '电话'));
+
+            // ══════════════════════════════════
+            //  打印
+            // ══════════════════════════════════
+            $('#printBtn').addEventListener('click', () => window.print());
+
+            // ══════════════════════════════════
+            //  返回顶部
+            // ══════════════════════════════════
+            const backToTop = $('#backToTop');
+            let scrollTimeout;
+            window.addEventListener('scroll', () => {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    if (window.scrollY > 400) backToTop.classList.add('visible');
+                    else backToTop.classList.remove('visible');
+                    const navbar = $('#navbar');
+                    if (window.scrollY > 10) navbar.classList.add('scrolled');
+                    else navbar.classList.remove('scrolled');
+                }, 30);
+            }, { passive: true });
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // ══════════════════════════════════
+            //  移动端菜单
+            // ══════════════════════════════════
+            const hamburgerBtn = $('#hamburgerBtn');
+            const navLinks = $('#navLinks');
+            hamburgerBtn.addEventListener('click', () => {
+                const isOpen = navLinks.classList.toggle('open');
+                hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+            navLinks.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A' && window.innerWidth <= 768) {
+                    navLinks.classList.remove('open');
+                    hamburgerBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // ══════════════════════════════════
+            //  区块入场动画
+            // ══════════════════════════════════
+            const sections = $$('.section, .hero');
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        sectionObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+            sections.forEach(s => {
+                s.style.opacity = '0';
+                s.style.transition = 'opacity 0.5s ease-out';
+                sectionObserver.observe(s);
+            });
+            const hero = $('#hero');
+            if (hero) hero.style.opacity = '1';
+
+            // ══════════════════════════════════
+            //  页脚
+            // ══════════════════════════════════
+            const footerYear = document.querySelector('.footer p');
+            if (footerYear) {
+                footerYear.textContent = '© 2026 江柯蓉 · 重庆 · 最后更新：' + resume.lastUpdated;
+            }
+        })();
+    </script>
+</body>
+</html>
